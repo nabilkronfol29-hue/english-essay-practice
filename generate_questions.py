@@ -132,15 +132,16 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Question {num}: {title} - English Essay Practice</title>
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
+  <span class="eyebrow">Literary Analysis Practice</span>
   <h1>English Essay Practice</h1>
   <p>Question {num} of {total}</p>
 </header>
 <main>
-  <a class="back-link" href="../index.html">&larr; Back to all questions</a>
+  <a class="back-link" href="index.html">&larr; Back to all questions</a>
 
   <div class="text-link-box">
     <a class="story-link" href="{link}" target="_blank" rel="noopener">Read: {title} ({type}) by {author} &#8599;</a>
@@ -191,28 +192,28 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   window.QUESTION_ID = "q{num}";
   window.QUESTION_PROMPT = {prompt_json};
 </script>
-<script src="../js/rubric.js"></script>
+<script src="rubric.js"></script>
 <script>
   window.renderRubric(document.getElementById("rubric-container"));
 </script>
-<script src="../js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 """
 
 total = len(QUESTIONS)
-questions_dir = os.path.join(ROOT, "questions")
+questions_dir = ROOT
 
 for i, q in enumerate(QUESTIONS, start=1):
     if i > 1:
         prev_link = f'<a href="q{i-1}.html">&larr; Question {i-1}</a>'
     else:
-        prev_link = '<a href="../index.html">&larr; All questions</a>'
+        prev_link = '<a href="index.html">&larr; All questions</a>'
 
     if i < total:
         next_link = f'<a href="q{i+1}.html">Question {i+1} &rarr;</a>'
     else:
-        next_link = '<a href="../index.html">Back to all questions &rarr;</a>'
+        next_link = '<a href="index.html">Back to all questions &rarr;</a>'
 
     html = PAGE_TEMPLATE.format(
         num=i,
