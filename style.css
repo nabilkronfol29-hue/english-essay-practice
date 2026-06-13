@@ -1,0 +1,334 @@
+:root {
+  --bg: #f7f5f0;
+  --card-bg: #ffffff;
+  --ink: #2b2b2b;
+  --muted: #6b6b6b;
+  --accent: #7a3b2e;
+  --accent-light: #f1e3dc;
+  --border: #e0dcd4;
+  --good: #2e6b3e;
+  --max-width: 800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Iowan Old Style", serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+header.site-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header.site-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header.site-header p {
+  margin: 0.4rem 0 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+.intro {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.question-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.question-card {
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.question-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.question-card .q-num {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 999px;
+  width: 1.8rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 1.8rem;
+  margin-right: 0.6rem;
+  font-family: Arial, sans-serif;
+}
+
+.question-card .q-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.question-card .q-sub {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  margin-left: 2.4rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.text-link-box {
+  background: var(--accent-light);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.text-link-box a.story-link {
+  font-weight: bold;
+  color: var(--accent);
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.text-link-box a.story-link:hover {
+  text-decoration: underline;
+}
+
+.text-link-box .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.prompt-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.prompt-box h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.requirements {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.requirements h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.requirements ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.requirements li {
+  margin-bottom: 0.5rem;
+}
+
+.rubric-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.rubric-section h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+details.rubric-standard {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.6rem;
+  background: var(--bg);
+}
+
+details.rubric-standard summary {
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+dl.rubric-levels {
+  margin: 0.8rem 0 0.2rem;
+}
+
+dl.rubric-levels dt {
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+dl.rubric-levels dd {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.essay-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+textarea#essay {
+  width: 100%;
+  min-height: 320px;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  resize: vertical;
+  background: var(--card-bg);
+  color: var(--ink);
+}
+
+.essay-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.6rem;
+}
+
+.word-count {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+button.action-btn {
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button.action-btn:hover {
+  background: #602e24;
+}
+
+button.action-btn.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+button.action-btn.secondary:hover {
+  background: var(--accent-light);
+}
+
+.save-status {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--good);
+  min-height: 1.2em;
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.nav-buttons a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+}
